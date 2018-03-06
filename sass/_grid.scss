@@ -1,0 +1,16 @@
+/* grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.grid-item {
+  /* left and right padding */
+  padding: 40px;
+}
+.center-all {
+  display: flex;            /* new */
+  align-items: center;      /* new */
+  justify-content: center;
+}
