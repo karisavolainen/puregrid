@@ -18,7 +18,7 @@ add_action( 'wp_print_styles', 'google_fonts' );
 
 /* Enqueue Styles and Scripts */
  function custom_scripts() {
-	wp_enqueue_style( 'puregrid', get_template_directory_uri() . '/css/puregrid.css' );
+	wp_enqueue_style( 'puregrid', get_template_directory_uri() . '/css/main.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
