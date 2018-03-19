@@ -13,7 +13,9 @@ add_action( 'init', 'register_my_menu' );
 
 /* Use Google fonts */
 function google_fonts() {
-				wp_register_style( 'WorkSans', '//fonts.googleapis.com/css?family=Work+Sans' );
+				wp_register_style( 'Nunito', '//fonts.googleapis.com/css?family=Nunito' );
+				wp_enqueue_style( 'Nunito' );
+        wp_register_style( 'WorkSans', '//fonts.googleapis.com/css?family=Work+Sans' );
 				wp_enqueue_style( 'WorkSans' );
 		}
 add_action( 'wp_print_styles', 'google_fonts' );
