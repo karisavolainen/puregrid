@@ -1,18 +1,20 @@
 
-<?php get_header(); ?>
+<?php
+/*
+ * Template Name: Article - no gallery
+ * Template Post Type: post, page, product
+ */
 
-<div class="grid-item textarea">
-  <?php
-	  if ( have_posts() ) : while ( have_posts() ) : the_post();
+get_header(); ?>
+<div class="grid-container">
+  <div class="grid-item content">
+    <?php
+  	  if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-		  get_template_part( 'content', get_post_format() );
+  		  get_template_part( 'content', get_post_format() );
 
-	  endwhile; endif;
-	?>
-</div>
-
-<div id="gallery" class="grid-item">
-  <p> Sidebar goes here </p>
-</div>
+  	  endwhile; endif;
+  	?>
+  </div>
 
 <?php get_footer(); ?>

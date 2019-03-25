@@ -8,20 +8,49 @@
     "footer footer";
   min-height: 100%;
 }
+.front-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hero hero hero"
+    "travel mac opinion"
+    "footer footer footer";
+  min-height: 100%;
+  background-position: center-all !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  position: relative;
+}
 
 .grid-item {
   padding: 40px;
+  background: transparent;
 }
 .content {
-  /*background: #ff7f00 !important;*/
   grid-area: content;
   padding-left: 5em;
 }
 .gallery {
-  /*background: #00ff7f !important;*/
   grid-area: gallery;
   padding: 20px;
   padding-right: 5em;
+}
+.bglight {
+  background: #eeeeee;
+}
+.travel {
+  grid-area: travel;
+}
+.mac {
+  grid-area: mac;
+}
+.opinion {
+  grid-area: opinion;
+}
+#headerimg {
+}
+.hero {
 }
 .footer {
   grid-area: footer;
@@ -56,6 +85,10 @@
   grid-column: span 2;
 }
 
+.hero {
+  background-size: cover;
+}
+
 @media screen and (max-width: 1000px) {
   .grid-container {
     padding-left: 2em;
@@ -65,6 +98,17 @@
       "content"
       "gallery"
       "footer";
+  }
+  .front-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "travel"
+      "mac"
+      "opinion"
+      "footer";
+    min-height: 100%;
   }
   .plaintext {
     padding-left: 5vh;

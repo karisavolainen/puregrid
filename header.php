@@ -24,4 +24,3 @@
         </div> <!-- menu -->
   </nav>
   <!-- content starts here, this is closed in footer.php -->
-<div class="grid-container">

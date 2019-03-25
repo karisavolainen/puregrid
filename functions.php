@@ -2,7 +2,7 @@
 
 /* Create Proper WordPress Titles */
 add_theme_support( 'title-tag' );
-/* Support featured images */
+/* featured images */
 add_theme_support( 'post-thumbnails' );
 
 /* Main navigation */
@@ -13,10 +13,12 @@ add_action( 'init', 'register_my_menu' );
 
 /* Use Google fonts */
 function google_fonts() {
-				wp_register_style( 'Nunito', '//fonts.googleapis.com/css?family=Nunito' );
-				wp_enqueue_style( 'Nunito' );
-        wp_register_style( 'WorkSans', '//fonts.googleapis.com/css?family=Work+Sans' );
+				wp_register_style( 'WorkSans', '//fonts.googleapis.com/css?family=Work+Sans' );
+        wp_register_style( 'Poppins', '//fonts.googleapis.com/css?family=Poppins' );
+        wp_register_style( 'Nunito', '//fonts.googleapis.com/css?family=Nunito' );
 				wp_enqueue_style( 'WorkSans' );
+        wp_enqueue_style( 'Poppins' );
+        wp_enqueue_style( 'Nunito' );
 		}
 add_action( 'wp_print_styles', 'google_fonts' );
 
@@ -36,21 +38,4 @@ if( function_exists('acf_add_options_page') ) {
                         'capability'    => 'publish_pages',
                         'redirect'              => false
                 ));
-}
-
-/* Disable Emoji Mess */
-function disable_wp_emojicons() {
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-	add_filter( 'emoji_svg_url', '__return_false' );
-}
-add_action( 'init', 'disable_wp_emojicons' );
-function disable_emojicons_tinymce( $plugins ) {
-	return is_array( $plugins ) ? array_diff( $plugins, array( 'wpemoji' ) ) : array();
 }

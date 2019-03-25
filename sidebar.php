@@ -1,28 +1,27 @@
-<div id="gallery2">
-<!--div class="masonry"-->
-    <?php
+
+  <?php
 
   $imgs = get_field('images');
 
   if( $imgs ): ?>
 
-    <?php foreach( $imgs as $image ): ?>
-      <!-- div class="item" -->
-          <a href="<?php echo $image['url']; ?>" class="fresco"   data-fresco-group="unique_name">
-            <?php
-              /* list($x, $y) = getimagesize($image['url']); */
-              $x = $image['sizes'][ 'large' . '-width' ];
-              $y = $image['sizes'][ 'large' . '-height' ];
-              if ($x > $y) {
-                $class = "landscape";
-              } else {
-                $class = "portrait";
-              }
-            ?>
-            <img src="<?php echo $image['sizes']['large']; ?>"  class="<?php echo $class; ?>" alt="<?php echo $image['alt']; ?>" />
+    <?php foreach( $imgs as $image):  ?>
+
+
+          <a class="<?php
+            $class = "landscape";
+            if ($image['width'] < $image['height']) {
+              $class = "portrait";
+            };
+            echo $class; ?>"
+            href="<?php echo $image['url']; ?>">
+            <img src="<?php echo $image['sizes']['large']; ?>"
+            alt="<?php echo $image['alt']; ?>" />
           </a>
-        <!--/div-->
-      <?php endforeach; ?>
+    <?php endforeach; ?>
 
   <?php endif; ?>
-</div>
+
+
+<!--p><?php echo $image['caption']; ?></p-->
+<!-- class="fresco"   data-fresco-group="unique_name" -->
