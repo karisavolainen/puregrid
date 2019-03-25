@@ -1,0 +1,91 @@
+/* navigation */
+#menuitems {
+  background: rgba(0, 0, 0 ,0.85);
+  height: 100%;
+  width: 15em;
+  /* transform stuff */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
+
+}
+#menu input:checked ~ ul
+{
+  transform: none;
+}
+#menu input, #hamburger
+{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 32px;
+  height: 22px;
+}
+#hamburger {
+  z-index: 2;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+#menuitems {
+  position: absolute;
+  width: 200px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: -8px;
+  margin-top: -8px;
+  padding-top: 75px;
+}
+#menu input
+{
+  display: block;
+  opacity: 0; /* hide this */
+  cursor: pointer;
+  z-index: 3; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+#menu span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+}
+#menu input:checked ~ #hamburger {
+    -ms-transform: rotate(450deg); /* IE 9 */
+    -webkit-transform: rotate(450deg); /* Chrome, Safari, Opera */
+    transform: rotate(450deg);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+/* navigation ends */
