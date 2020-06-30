@@ -8,7 +8,8 @@
 ?>
 <?php $image_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
 
-<div class="front-grid" style="background: url(<?php echo $image_url; ?>);" >
+<div class="front-container" >
+  <!-- div class="front-container" style="background: url(<?php echo $image_url; ?>);" -->
 
   <div class="grid-item hero" >
     <?php

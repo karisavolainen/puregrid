@@ -17,8 +17,9 @@ get_header(); ?>
   	?>
   </div>
 
-  <div class="grid-item gallery-grid">
+  <div class="grid-item gallery">
     <?php get_sidebar(); ?>
   </div>
+</div>
 
 <?php get_footer(); ?>

@@ -1,7 +1,15 @@
 html {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans', Helvetica, sans-serif;
   p {
     line-height: 1.5em;
     font-family: 'Nunito', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #656565;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .125em;
   }
 }

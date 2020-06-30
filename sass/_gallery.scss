@@ -1,32 +1,21 @@
-.item {
-    display: inline-block;
-    margin: 5px;
+.gallery {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      margin-left: auto;
+      margin-right: auto;
 }
-.masonry {
-    column-count: 2;
-}
-#gallery {
-    display: grid;
-    grid-gap: 20px;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    img {
-      margin-bottom: 10px;
-    }
+img {
+    border-radius: 3px;
+    max-width: 100%;
 }
 .landscape {
-  position: relative;
-  width: calc(100% - 30px);
-  display: block;
-  float: left;
-  margin-right: 20px;
+  grid-column: span 2;
 
 }
 .portrait {
-  width: calc(50% - 20px);
-  float: left;
-  position: relative;
-  display: block;
-  margin-right: 10px;
+  grid-column: span 1;
+}
+@media screen and (max-width: 700px) {
+  .portrait { grid-column: span 2; }
 }
