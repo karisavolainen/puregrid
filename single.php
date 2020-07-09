@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<div class="grid-container">
+<div class="grid-container single">
   <div class="grid-item content">
     <?php
   	  if ( have_posts() ) : while ( have_posts() ) : the_post();

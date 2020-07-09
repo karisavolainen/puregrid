@@ -20,6 +20,5 @@ get_header(); ?>
   <div class="grid-item gallery">
     <?php get_sidebar(); ?>
   </div>
-</div>
 
 <?php get_footer(); ?>
