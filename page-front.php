@@ -23,6 +23,7 @@
   </div>
 
     <div class="cat">
+      <img class="icon" src="wp-content/uploads/2020/07/airplane.png">
       <h2 class="center-text"> Reissut </h2>
 
         <?php $catquery = new WP_Query( 'cat=4&posts_per_page=5' ); ?>
@@ -36,6 +37,7 @@
     </div>
 
     <div class="cat">
+      <img class="icon" src="wp-content/uploads/2020/07/brand.png">
       <h2 class="center-text"> Mac </h2>
 
       <?php $catquery = new WP_Query( 'cat=2&posts_per_page=5' ); ?>
@@ -47,6 +49,7 @@
     </div>
 
     <div class="cat">
+      <img class="icon" src="wp-content/uploads/2020/07/camera.png">
       <h2 class="center-text"> Valokuvaus </h2>
 
       <?php $catquery = new WP_Query( 'cat=3&posts_per_page=5' ); ?>
